@@ -1,0 +1,46 @@
+:root {
+    --clock-dimensions: calc(200px + 5vw)
+}
+html {
+    background-image: linear-gradient(180deg, blue, green);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-face {
+    border: 15px solid white;
+    height: var(--clock-dimensions);
+    width: var(--clock-dimensions);
+    border-radius: 50%;
+    display: flex;
+    padding: 5px;
+    position: relative;
+}
+
+.hand {
+    background-color: black;
+    height: 5px;
+    z-index: 1;
+    width: 45%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform-origin: 98%;
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0, 2.22, 0.58, 1);
+}
+
+.hour-hand {
+    height: 10px;
+    width: 35%;
+    transform: rotate(90deg);
+}
+
+.minute-hand {
+    height: 8px;
+    width: 40%;
+    transform: rotate(180deg);
+}
